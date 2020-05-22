@@ -6,6 +6,7 @@ public class ZeroCross extends Frame implements ActionListener{
 			System.exit(0);
 		}
 	}
+	Font font=new Font("Consolas",Font.BOLD,30);
 	Button bt[]=new Button[9];
 	static int n=0;
 	boolean win=false;
@@ -17,9 +18,10 @@ public class ZeroCross extends Frame implements ActionListener{
 		for(int i=0;i<9;++i){
 			bt[i]=new Button(a[i]);
 			add(bt[i]);
+			bt[i].setFont(font);
 			bt[i].addActionListener(this);
 		}
-		setBounds(450,170,400,400);
+		setBounds(450,170,450,450);
 		setVisible(true);
 	}
 	public void actionPerformed(ActionEvent e){
